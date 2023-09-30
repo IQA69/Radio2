@@ -32,18 +32,6 @@ public class Radio {
         this.currentStation = currentStation;
     }
 
-    public void loud() {
-        if (currentVolume != 100) {
-            currentVolume++;
-        }
-    }
-
-    public void quiet() {
-        if (currentVolume != 0) {
-            currentVolume--;
-        }
-    }
-
     public int getCurrentVolume() {
         return currentVolume;
     }
@@ -61,14 +49,12 @@ public class Radio {
     public void increaseVolume() {
         if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
-            return;
         }
     }
 
     public void reduceVolume() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
-            return;
         }
     }
 }
